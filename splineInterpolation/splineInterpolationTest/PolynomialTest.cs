@@ -18,7 +18,7 @@ namespace splineInterpolationTest
             coefficients.Add(3.0);
             coefficients.Add(1.0);
             
-            Polynomial poly(coefficients);
+            Polynomial poly = new Polynomial(coefficients);
 
             double expected = 8.0;
 
