@@ -7,17 +7,20 @@ namespace splineInterpolation
     {
         private List<double> coefficients;
 
-        public Polynomial()
+        public Polynomial(int degree = 3)
         {
-            coefficients.Add(0);
-            coefficients.Add(0);
-            coefficients.Add(0);
+            this.coefficients = new List<double>();
+
+            for (int n = 0; n < degree; n++)
+            {
+                coefficients.Add(0);
+            }
             coefficients.Add(1);
         }
 
         public Polynomial(List<double> coefficients)
         {
-            this.coefficients = coefficients;
+            this.coefficients = new List<double>(coefficients);
         }
 
         public double getValue(double x)
